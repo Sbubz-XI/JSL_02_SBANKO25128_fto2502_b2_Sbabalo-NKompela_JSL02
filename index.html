@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/output.css" />
+    <link rel="icon" type="image/png" href="assets/icon-board.svg">
     <title>Kanban task manager</title>
   </head> 
 
@@ -24,12 +25,19 @@
 
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
     <div>
+      
       <header class="bg-white w-screen h-20 md:h-24.25 shadow-xl border-[#828FA3] flex items-center pl-4">
+        
         <div class="flex md:justify-start md:flex">
           <span class="col-span-1 md:hidden w-9 h-9 bg-no-repeat bg-contain" style="background-image: url('assets/favicon.svg');" alt="Mobile Logo"></span>
           <h2 class="col-span-2 text-2xl font-bold mt-1 ml-3 md:ml-5">Launch Career</h2>
           <span class="col-span-1 mt-4 ml-5 md:hidden w-3 h-3 bg-no-repeat bg-center bg-contain" style="background-image: url('assets/drop-down.svg');" alt="Drop down arrow"></span>
         </div>
+
+        <div class="absolute right-0 hidden md:flex md:justify-end md:items-center md:mr-5">
+          <button onclick="addTask()" class="bg-[#635FC7] text-white p-2 rounded-2xl w-full"> Add Task </button>
+        </div>
+
       </header>
 
       <div class="bg-[#F4F7FD] w-full h-full">
@@ -42,10 +50,12 @@
             </div>
             <!-- Tasks container for TODO -->
             <div>
-              <div class="bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 text-lg font-bold shadow-md">Launch Epic Career 🚀</div>
-              <div class="bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 text-lg font-bold shadow-md">Conquer React ✡️</div>
-              <div class="bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 text-lg font-bold shadow-md">Understand Databases ⚙️</div>
-              <div class="bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 text-lg font-bold shadow-md">Crush Frameworks 🖼️</div>
+              <div class="bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 text-lg font-bold shadow-md">
+
+                
+                
+
+              </div>
             </div>
           </div>
           <!-- DOING Column -->
