@@ -4,7 +4,6 @@ function addTask() {
 
 function getTaskDetails() {
   let title = prompt("Enter the task title:").trim();
-  let description = prompt("Enter the task description:").trim();
   let status = prompt("Enter the task status (TODO, DOING, DONE):")
     .trim()
     .toLowerCase();
@@ -19,7 +18,7 @@ function getTaskDetails() {
 
   console.log(`Task Added - Title: "${title}", Status: "${status}"`);
 
-  return { title, description, status };
+  return { title, status };
 }
 
 function addTask() {
@@ -28,7 +27,7 @@ function addTask() {
   let taskElement = document.createElement("div");
   taskElement.className =
     "bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 text-lg font-bold shadow-md";
-  taskElement.innerHTML = `<h3>${task.title}</h3><p class="text-gray-600">${task.description}</p>`;
+  taskElement.innerHTML = `<h3 class="text-lg font-bold">${task.title}</h3>`;
 
   document.getElementById(`${task.status}-column`).appendChild(taskElement);
 
