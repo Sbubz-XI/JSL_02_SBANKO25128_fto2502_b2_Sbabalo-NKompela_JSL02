@@ -1,52 +1,73 @@
-# JSL02 Project Brief: Task Input and Status Validation System
+# 🏗 Kanban Task Manager
 
-## Important Prerequisite
+## 📌 Overview
 
-1. Before starting this challenge, ensure that you have **corrected your JSL01 project (HTML and CSS)** using the solution provided. This will help maintain consistency and ensure you build on a solid foundation.
-2. **Check the project user stories in your student dashboard**, make sure you understand what is required for each feature.
+This project is a **Kanban-style task manager** that enables users to track tasks efficiently. Initially designed with **Tailwind CSS**, it now includes **JavaScript-powered dynamic task input**,and status validation.
 
-## Overview
+---
 
-This project involves implementing a JavaScript-based task entry system where users can input two tasks with complete details, ensuring data consistency and validation. The system will guide users through entering valid task titles, descriptions, and statuses, enforcing correct formatting while maintaining code clarity and maintainability.
+## 🎨 UI/UX Development (Last Week)
 
-## Key Objectives
+### **🔹 Tailwind CSS Integration**
 
-### Logic & User Interaction
+- **Responsive Design:** Optimized for **desktop & mobile** with utility classes.
+- **Interactive Hover Effects:** Used `hover:scale-101` and `transition-all duration-300` for UI enhancements.
+- **Status Indicators:** Color-coded task categories (`TODO`, `DOING`, `DONE`) using `bg-[#49C4E5]`, `bg-[#8471F2]`, and `bg-[#67E2AE]`.
+- **Icon & Typography Setup:** Integrated Google Fonts (`Plus Jakarta Sans`) and SVG icons for branding.
 
-- Ensure the JavaScript file is correctly linked to the HTML document.
-- Prompt the user to enter details (title, description, status) for two separate tasks and store them in variables.
-- Convert all status inputs to lowercase automatically for consistency.
-- Validate the status input to allow only "todo", "doing", or "done" and repeatedly prompt the user until a valid status is entered.
-- Display the title and status of completed tasks (status: "done") in the console.
-- If no tasks are marked as "done", show a motivational message in the console: "No tasks completed, let's get to work!".
+### **🔹 Structure & Components**
 
-## Code Quality & Maintainability
+- **Navbar with Board Navigation**
+- **Task Columns grouped by status**
+- **Button to trigger task input prompt**
 
-- Use descriptive variable names to enhance readability and maintainability.
-- Include clear comments explaining complex logic and functionality for easier understanding.
+---
 
-## Expected Outcome
+## 💻 JavaScript Functionality (Current Update)
 
-A functional task entry system that ensures accurate data collection, validation, and structured storage while maintaining clean and well-documented code for easy future modifications.
+### **🔹 Task Input System**
 
-**Prompt Input Example**
+Users can **add new tasks step-by-step** via **Google Chrome prompts**:
 
-- The program must prompt users for task 1 title, descrition and status inputs, it must do the same for task 2 information
+- **Title:** Enter task name.
+- **Status:** Choose `TODO`, `DOING`, or `DONE` (validation enforced).
 
-  ![title prompt](./explainer-images/title%20prompt.png)
+### **🔹 Status Validation & Dynamic Task Placement**
 
-**Invalid status**
+- Status **auto-converts to lowercase** for consistency.
+- Tasks **appear dynamically** in their respective columns.
+- If a status is invalid, users must **re-enter a valid status**.
 
-- If the user enters a status other than `todo`, `doing` or `done`, the program must alert the user of this and return to prompting them to enter a status.
+### **🔹 Local Storage Persistence**
 
-  ![invalid status](./explainer-images/invalid%20status.png)
+- **Tasks are saved automatically** in `localStorage`.
+- When the page reloads, tasks **reappear in their correct columns**.
+- Console logs `"No Tasks Completed, let's get to work."` if no tasks are marked `"done"`.
 
-**Console log**
+---
 
-- When there is a completed task:
+## 🛠 Technologies Used
 
-  ![invalid status](./explainer-images/completed%20task%20log.png)
+- **HTML5 & Tailwind CSS** → UI Styling & Layout
+- **JavaScript** → Task management & local storage
+- **Local Storage API** → Data persistence
 
-- When there are no completed tasks:
+---
 
-  ![invalid status](./explainer-images/no%20completed%20tasks%20log.png)
+## 📌 Future Improvements
+
+🔹 **Drag-and-Drop Functionality** for moving tasks.  
+🔹 **Task Editing & Deletion** options for flexibility.  
+🔹 **Backend Integration** for saving tasks permanently.
+
+---
+
+## 🎯 How to Run the Project
+
+1️⃣ **Clone the repository**:
+
+```sh
+git clone https://github.com/Sbubz-XI/JSL_02_SBANKO25128_fto2502_b2_Sbabalo-NKompela_JSL02.git
+```
+
+2️⃣ Open `index.html` in a browser to test the Kanban board.
