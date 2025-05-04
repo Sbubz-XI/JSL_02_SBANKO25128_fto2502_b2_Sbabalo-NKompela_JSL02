@@ -1,0 +1,43 @@
+function addTask() {
+  alert("Task added!"); // Temporary test
+}
+
+function getTaskDetails() {
+  let title = prompt("Enter the task title:").trim();
+  let description = prompt("Enter the task description:").trim();
+  let status = prompt("Enter the task status (TODO, DOING, DONE):")
+    .trim()
+    .toLowerCase();
+
+  // Validate status input
+  while (!["todo", "doing", "done"].includes(status)) {
+    alert("Invalid status! Please enter todo, doing, or done.");
+    status = prompt("Enter the task status (TODO, DOING, DONE):")
+      .trim()
+      .toLowerCase();
+  }
+
+  console.log(`Task Added - Title: "${title}", Status: "${status}"`);
+
+  return { title, description, status };
+}
+
+function addTask() {
+  let task = getTaskDetails();
+
+  let taskElement = document.createElement("div");
+  taskElement.className =
+    "bg-white rounded-lg hover:bg-[#E4EBFA] hover:scale-101 transition-all duration-300 mb-5 py-4 px-4 text-lg font-bold shadow-md";
+  taskElement.innerHTML = `<h3>${task.title}</h3><p class="text-gray-600">${task.description}</p>`;
+
+  document.getElementById(`${task.status}-column`).appendChild(taskElement);
+
+  // Check for completed tasks and log appropriate message
+  let doneTasks = document.getElementById("done-column").children.length;
+
+  if (doneTasks > 0) {
+    console.log(`Task Added - Title: "${title}", Status: "${status}"`);
+  } else {
+    console.log("🚀 No Tasks Completed, let's get to work.");
+  }
+}
